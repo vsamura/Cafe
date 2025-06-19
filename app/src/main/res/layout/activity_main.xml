@@ -59,7 +59,7 @@
         android:backgroundTint="@color/orange"
         android:padding="16dp"
         android:text="@string/enter"
-        android:textColor="@color/grey"
+        android:textColor="@color/white"
         android:textStyle="bold" />
 
 

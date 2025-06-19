@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MaceOrderActivity">
+
+    <TextView
+        android:id="@+id/textViewGreetings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        android:text="@string/hello_what"
+        android:textAlignment="center"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/textViewAdditives"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGreetings">
+
+        <RadioButton
+            android:id="@+id/radioTee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/tee"
+            android:textColor="@color/grey" />
+
+        <RadioButton
+            android:id="@+id/radioCafe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/cafe"
+            android:textColor="@color/grey" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewAdditives"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/wathDobavka"
+        android:textAlignment="center"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxSahar"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxMilk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/milk"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxSahar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/checkBoxSahar"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBoxSahar"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxSahar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/sahar"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toTopOf="@+id/textViewSpisok"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxLemon"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxMilk"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAdditives"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxLemon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/lemon"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxSahar"
+        app:layout_constraintTop_toTopOf="@+id/checkBoxSahar"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBoxSahar"/>
+
+    <TextView
+        android:id="@+id/textViewSpisok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/type"
+        android:textAlignment="center"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinerTee"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxSahar"/>
+
+    <Spinner
+        android:id="@+id/spinerTee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="16dp"
+        android:entries="@array/tee"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/bottonZakaz"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSpisok"/>
+
+    <Spinner
+        android:id="@+id/spinerCafe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="16dp"
+        android:entries="@array/cafe"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/bottonZakaz"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSpisok" />
+
+    <Button
+        android:id="@+id/bottonZakaz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/orange"
+        android:textColor="@color/white"
+        android:text="@string/bottomZakaz"
+        android:textSize="20sp"
+        android:padding="16dp"
+        android:layout_margin="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinerCafe"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

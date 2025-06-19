@@ -1,7 +1,27 @@
 <resources>
     <string name="app_name">Cafe</string>
-    <string name="hello">Добро пожаловать</string>
+    <string name="hello">Добро пожаловать!</string>
     <string name="user_name">Имя пользователя</string>
     <string name="password">Пароль</string>
     <string name="enter">ВХОД</string>
+    <string name="hello_what">Привет %s! Что желаете?</string>
+    <string name="tee">Чай</string>
+    <string name="cafe">Кофе</string>
+    <string name="wathDobavka">Что добавить в ваш %s</string>
+    <string name="milk">Молоко</string>
+    <string name="sahar">Сахар</string>
+    <string name="lemon">Лемон</string>
+    <string name="type">Выбери тип напитка</string>
+    <string name="bottomZakaz">Зделать заказ</string>
+    <array name="tee">
+        <item>Черный</item>
+        <item>Зелёный</item>
+        <item>Цветочный</item>
+        <item>Белый</item>
+    </array>
+    <array name="cafe">
+        <item>Капучино</item>
+        <item>Американо</item>
+        <item>Латте</item>
+    </array>
 </resources>
