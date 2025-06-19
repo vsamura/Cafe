@@ -13,6 +13,10 @@
     <string name="lemon">Лемон</string>
     <string name="type">Выбери тип напитка</string>
     <string name="bottomZakaz">Зделать заказ</string>
+    <string name="name">Имя:</string>
+    <string name="drink">Напиток:</string>
+    <string name="drink_type">Тип напитка:</string>
+    <string name="dob">Добавки:</string>
     <array name="tee">
         <item>Черный</item>
         <item>Зелёный</item>
